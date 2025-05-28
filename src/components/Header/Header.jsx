@@ -2,7 +2,7 @@ import { Menu, ArrowLeft, Bell, User, LogOut } from "lucide-react";
 import { modal, showLoginModal, showSignUpModal } from '../../features/pageActionSlice';
 import { useDispatch } from "react-redux";
 import TodayCalendar from "../TodayCalendar/TodayCalendar";
-import { useLocation, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const Header = () => {
@@ -63,12 +63,13 @@ const Header = () => {
         />
 
         {/* Bell */}
-        <button
+        <NavLink
+          to="/notification"
           aria-label="Notifications"
           className="p-2 rounded-full hover:bg-gray-100 transition-transform active:scale-95"
         >
           <Bell className="text-gray-600" size={24} />
-        </button>
+        </NavLink>
 
         {/* User avatar */}
         <div className="relative">

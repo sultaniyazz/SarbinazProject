@@ -16,6 +16,8 @@ import MyListings from './pages/MyListings/MyListings';
 import HomeDetail from './pages/detail/HomeDetail';
 import LoginForm from './components/LoginForm/LoginForm';
 import SignUpForm from './components/SignUpForm/SignUpForm';
+import Notification from './pages/Notification/Notification';
+
 
 const App = () => {
   const dispatch = useDispatch();
@@ -35,6 +37,7 @@ const App = () => {
         <Route path="favourite" element={<Favourite />} />
         <Route path="my-listings" element={<MyListings />} />
         <Route path="messages" element={<Messages />} />
+        <Route path="/notification" element={<Notification />} />
       </Route>
     )
   );
