@@ -18,10 +18,10 @@ export const NavbarList = [
     icon: HeartPlus,
     url: '/favourite',
   },
-  {
-    id: 4,
-    name: 'Messages',
-    icon: MessageCircleMore,
-    url: '/messages',
-  },
+  // {
+  //   id: 4,
+  //   name: 'Messages',
+  //   icon: MessageCircleMore,
+  //   url: '/messages',
+  // },
 ]
