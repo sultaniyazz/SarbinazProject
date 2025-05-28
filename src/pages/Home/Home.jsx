@@ -19,9 +19,9 @@ const Home = () => {
   return (
     <div>
       <div className='sm:p-4 p-2 sm:gap-2 gap-3 w-full items-stretch justify-center  grid grid-cols-2 lg:grid-cols-4 sm:grid-cols-3'>
-        <HomeCards header={'Total Properties'} number={isHomeData.length} procent={'+12%'} />
-        <HomeCards header={'Properties Rented'} number={isHomeDataRented.length} procent={'+32%'} />
-        <HomeCards header={'Properties Sold'} number={isHomeDataSold.length} procent={'+2%'} />
+        <HomeCards header={'Umumiy Uylar'} number={isHomeData.length} />
+        <HomeCards header={'Ijaradagi Uylar'} number={isHomeDataRented.length} />
+        <HomeCards header={'Sotilgan Uylar'} number={isHomeDataSold.length} />
       </div>
       <div>
         <div className='sm:p-4 p-2'>

@@ -4,7 +4,7 @@ import { modal } from '../features/pageActionSlice'
 import Navbar from '../components/Navbar/Navbar'
 import Header from '../components/Header/Header'
 import { Outlet } from 'react-router-dom'
-import { Brain } from 'lucide-react'
+import logo from '../assets/logo.png'
 
 const RootLayout = () => {
   const dispatch = useDispatch()
@@ -34,7 +34,7 @@ const RootLayout = () => {
         className={`${modalSidebar ? 'translate-x-0' : 'max-sm:-translate-x-full'} w-45 max-sm:fixed bg-white z-40 border border-gray-200 flex flex-col gap-1 transition-transform duration-300 ease-in-out`}
       >
         <div className='h-20 flex justify-center items-center text-xl font-semibold font-serif'>
-          <Brain size={35} /> HomeSale
+          <img src={logo} className='w-25' />
         </div>
         <div className='h-screen overflow-y-auto p-2'>
           <Navbar />

@@ -23,9 +23,10 @@ const AddListingModal = () => {
   const formik = useFormik({
     initialValues: {
       title: '', location: '', price: '', rooms: '', area: '',
-      status: 'active', description: '', number: '', seller: '', images: []
+      status: 'active', description: '', number: '', seller: '', images: [], adminId: ''
     },
     validationSchema: Yup.object({
+      adminId: Yup.string().required('Majburiy'),
       title: Yup.string().required('Majburiy'),
       location: Yup.string().required('Majburiy'),
       price: Yup.number().typeError('Faqat raqam').required('Majburiy'),
@@ -60,7 +61,8 @@ const AddListingModal = () => {
         seller: values.seller,
         likes: 0,
         postedAt: new Date().toISOString(),
-        comments: []
+        comments: [],
+        adminId: values.adminId
       };
 
       try {
@@ -83,6 +85,16 @@ const AddListingModal = () => {
     const newImages = formik.values.images.filter((_, i) => i !== index);
     formik.setFieldValue('images', newImages);
   };
+  useEffect(() => {
+    const user = localStorage.getItem('loggedInUser');
+    if (user) {
+      const parsedUser = JSON.parse(user);
+      if (parsedUser.id) {
+        formik.setFieldValue('adminId', parsedUser.id);
+      }
+    }
+  }, []);
+
 
   return (
     <div className="p-6 bg-white rounded-xl shadow border">

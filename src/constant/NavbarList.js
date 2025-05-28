@@ -2,19 +2,19 @@ import { HeartPlus, House, ListTodo, MessageCircleMore } from "lucide-react";
 export const NavbarList = [
   {
     id: 1,
-    name: 'Home',
+    name: 'Bosh sahifa',
     icon: House,
     url: '/',
   },
   {
     id: 2,
-    name: 'My listings',
+    name: 'Elonlarim',
     icon: ListTodo,
     url: '/my-listings',
   },
   {
     id: 3,
-    name: 'Favourites',
+    name: 'Saqlanganlar',
     icon: HeartPlus,
     url: '/favourite',
   },
