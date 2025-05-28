@@ -45,7 +45,6 @@ const SignUpForm = ({ onSignUp }) => {
         return;
       }
 
-      // Ma’lumotlarni API ga yuboramiz
       await axios.post('https://sarbinazapiadmin.onrender.com/users', {
         id: newId,
         fullName: form.fullName,
