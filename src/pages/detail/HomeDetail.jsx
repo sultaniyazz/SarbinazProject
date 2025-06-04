@@ -165,7 +165,7 @@ const HomeDetail = ({ onEdit }) => {
           <p className="text-gray-700">{selectedHome.description}</p>
         </div>
         {selectedHome.residents && selectedHome.residents.length > 0 && (
-          <div className="mt-10">
+          <div className="my-8">
             <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
               <User size={20} /> Hozirda yashayotganlar ({selectedHome.residents.length})
             </h2>
@@ -190,7 +190,7 @@ const HomeDetail = ({ onEdit }) => {
           </div>
         )}
 
-        <h2 className="font-medium mb-3 mt-5 flex items-center gap-2 text-lg">
+        <h2 className="font-medium mb-3  flex items-center gap-2 text-lg">
           <MessageSquare size={18} /> Izohlar ({localComments.length})
         </h2>
 
