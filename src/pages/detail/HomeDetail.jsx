@@ -190,7 +190,7 @@ const HomeDetail = ({ onEdit }) => {
           </div>
         )}
 
-        <h2 className="font-medium mb-3 flex items-center gap-2 text-lg">
+        <h2 className="font-medium mb-3 mt-5 flex items-center gap-2 text-lg">
           <MessageSquare size={18} /> Izohlar ({localComments.length})
         </h2>
 
