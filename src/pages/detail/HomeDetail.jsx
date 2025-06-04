@@ -164,6 +164,32 @@ const HomeDetail = ({ onEdit }) => {
           <h2 className="text-xl font-semibold">Batafsil ma'lumot</h2>
           <p className="text-gray-700">{selectedHome.description}</p>
         </div>
+        {selectedHome.residents && selectedHome.residents.length > 0 && (
+          <div className="mt-10">
+            <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
+              <User size={20} /> Hozirda yashayotganlar ({selectedHome.residents.length})
+            </h2>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {selectedHome.residents.map((person, index) => (
+                <div
+                  key={index}
+                  className="bg-white border border-gray-200 rounded-lg shadow-sm p-4 flex gap-4 items-center"
+                >
+                  <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 font-semibold text-lg">
+                    {person.name.split(' ')[0][0]}
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-800">{person.name}</p>
+                    <p className="text-sm text-gray-600">Yosh: {person.age}</p>
+                    <p className="text-sm text-gray-600">Kasbi: {person.occupation}</p>
+                    <p className="text-sm text-blue-600">{person.phone}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         <h2 className="font-medium mb-3 flex items-center gap-2 text-lg">
           <MessageSquare size={18} /> Izohlar ({localComments.length})
         </h2>
